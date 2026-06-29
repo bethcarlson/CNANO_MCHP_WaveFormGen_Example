@@ -1,0 +1,20 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: ARM::CMSIS@6.3.0
+      selected-by-pack:
+        - ARM::CMSIS
+    - resolved-pack: ARM::CMSIS-Compiler@2.2.0
+      selected-by-pack:
+        - ARM::CMSIS-Compiler
+    - resolved-pack: ARM::CMSIS-FreeRTOS@11.3.0
+      selected-by-pack:
+        - ARM::CMSIS-FreeRTOS
+    - resolved-pack: Microchip::CMSIS-Driver_PIC32CM-JH@1.0.0
+      selected-by-pack:
+        - Microchip::CMSIS-Driver_PIC32CM-JH
+    - resolved-pack: Microchip::PIC32CM-JH_DFP@1.7.296
+      selected-by-pack:
+        - Microchip::PIC32CM-JH_DFP
+    - resolved-pack: Microchip::PIC32CM-JH_Examples@1.0.0
+      selected-by-pack:
+        - Microchip::PIC32CM-JH_Examples

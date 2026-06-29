@@ -1,0 +1,52 @@
+# A project translates into one executable or library.
+project:
+
+  groups:
+    - group: Source Files
+      files:
+        - file: main.c
+        - file: retarget.c
+        - file: app.c
+        - file: waveform.c
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:Startup
+    - component: CMSIS Driver:GPIO
+    - component: MCHP-PLIB:GCLK
+    - component: MCHP-PLIB:MCLK
+    - component: MCHP-PLIB:OSC32KCTRL
+    - component: MCHP-PLIB:System Interrupt
+    - component: MCHP-PLIB:PORT
+    - component: MCHP-PLIB:OSCCTRL
+    - component: MCHP-PLIB:DAC
+    - component: MCHP-PLIB:NVMCTRL
+    - component: CMSIS-Compiler:CORE
+    - component: CMSIS-Compiler:STDOUT:Custom
+    - component: CMSIS-Compiler:STDIN:Custom
+    - component: MCHP-PLIB:TC:TC0&Capture-16bit
+    - component: CMSIS-Compiler:OS Interface:CMSIS-RTOS2
+    - component: CMSIS:OS Tick:SysTick
+    - component: CMSIS:RTOS2:FreeRTOS&Cortex-M
+    - component: RTOS&FreeRTOS:Config&CMSIS RTOS2
+    - component: RTOS&FreeRTOS:Core&Cortex-M
+    - component: RTOS&FreeRTOS:Event Groups
+    - component: RTOS&FreeRTOS:Heap&Heap_4
+    - component: RTOS&FreeRTOS:Timers
+    - component: CMSIS Driver:USART:USART1
+    - component: MCHP-PLIB:SERCOM:SERCOM_USART1
+
+  # List executable file formats to be generated.
+  output:
+    type:
+      - elf
+      - hex
+      - map
+  packs:
+    - pack: ARM::CMSIS
+    - pack: Microchip::PIC32CM-JH_DFP
+    - pack: Microchip::CMSIS-Driver_PIC32CM-JH
+    - pack: ARM::CMSIS-Compiler
+    - pack: ARM::CMSIS-FreeRTOS

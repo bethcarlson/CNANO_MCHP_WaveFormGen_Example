@@ -1,0 +1,74 @@
+warning cbuild: path does not exist: 'tmp'
++-----------------------------------------------------------------------------
+(1/1) Cleaning context: "CNANO_MCHP_FreeRTOS_Example.Debug+PIC32CM5164JH01048"
++-----------------------------------------------------------------------------
+(1/1) Building context: "CNANO_MCHP_FreeRTOS_Example.Debug+PIC32CM5164JH01048"
+Using GCC V14.2.1 compiler, from: 'C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin'
+[34m[1mBuilding CMake target 'CNANO_MCHP_FreeRTOS_Example.Debug+PIC32CM5164JH01048'[0m
+Using compiler: GCC V14.2.1
+[1/36] Building C object CMakeFiles/Group_Source_Files.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/retarget.c.obj
+[2/36] Building C object CMakeFiles/ARM_CMSIS-Compiler_OS_Interface_CMSIS-RTOS2_2_1_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.2.0/source/os_interface/gcc/retarget_lock_rtos2.c.obj
+[3/36] Building C object CMakeFiles/Group_Source_Files.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/app.c.obj
+[4/36] Building C object CMakeFiles/Group_Source_Files.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/waveform.c.obj
+[5/36] Building C object CMakeFiles/ARM_CMSIS-Compiler_CORE_1_2_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-Compiler/2.2.0/source/core/gcc/retarget_syscalls.c.obj
+[6/36] Building C object CMakeFiles/ARM_CMSIS_OS_Tick_SysTick_1_0_5.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS/6.3.0/CMSIS/RTOS2/Source/os_systick.c.obj
+[7/36] Building C object CMakeFiles/ARM_CMSIS_RTOS2_FreeRTOS_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/CMSIS/RTOS2/FreeRTOS/Source/clib_os.c.obj
+[8/36] Building C object CMakeFiles/Group_Source_Files.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/main.c.obj
+[9/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c.obj
+[10/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/list.c.obj
+[11/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/portable/GCC/ARM_CM0/portasm.c.obj
+[12/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/portable/GCC/ARM_CM0/port.c.obj
+[13/36] Building C object CMakeFiles/ARM_CMSIS_RTOS2_FreeRTOS_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c.obj
+[14/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Event_Groups_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/event_groups.c.obj
+[15/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Heap_Heap_4_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/portable/MemMang/heap_4.c.obj
+[16/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/queue.c.obj
+[17/36] Building C object CMakeFiles/Microchip_Device_Startup_1_7_0.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c.obj
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c: In function 'NMI_Handler':
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c:64:5: warning: 'NonMaskableInt_Handler' is deprecated: Use NMI_Handler instead [-Wdeprecated-declarations]
+   64 |     NonMaskableInt_Handler();
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c:57:6: note: declared here
+   57 | void NonMaskableInt_Handler         (void) __attribute__ ((weak, alias("Default_Handler"))); /* Legacy handler name */
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c: In function 'SVC_Handler':
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c:67:5: warning: 'SVCall_Handler' is deprecated: Use SVC_Handler instead [-Wdeprecated-declarations]
+   67 |     SVCall_Handler();
+      |     ^~~~~~~~~~~~~~
+C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/startup_pic32cm5164jh01048.c:59:6: note: declared here
+   59 | void SVCall_Handler                 (void) __attribute__ ((weak, alias("Default_Handler"))); /* Legacy handler name */
+      |      ^~~~~~~~~~~~~~
+[18/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Core_Cortex-M_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/tasks.c.obj
+[19/36] Building C object CMakeFiles/ARM_RTOS_FreeRTOS_Timers_11_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.3.0/Source/timers.c.obj
+[20/36] Building C object CMakeFiles/Microchip_CMSIS_Driver_GPIO_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/driver/cmsis/Source/Driver_GPIO.c.obj
+[21/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_DAC_1_0_1.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_dac.c.obj
+[22/36] Building C object CMakeFiles/Microchip_Device_Startup_1_7_0.dir/C_/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/RTE/Device/PIC32CM5164JH01048/system_pic32cm5164jh01048.c.obj
+[23/36] Building C object CMakeFiles/Microchip_CMSIS_Driver_USART_USART1_1_3_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/driver/cmsis/Source/Driver_USART1.c.obj
+[24/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_GCLK_2_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_gclk.c.obj
+[25/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_MCLK_2_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_mclk.c.obj
+[26/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_NVMCTRL_1_1_1.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_nvmctrl.c.obj
+[27/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_OSC32KCTRL_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_osc32kctrl.c.obj
+[28/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_PORT_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_port.c.obj
+[29/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_OSCCTRL_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_clock.c.obj
+[30/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_SERCOM_SERCOM_USART1_1_0_2.dir/42f9ef4f4b8a47d954403fb4d0ee550a/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_sercom1_7_interrupt.c.obj
+[31/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_OSCCTRL_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_oscctrl.c.obj
+[32/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_System_Interrupt_1_0_0.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/system_interrupt.c.obj
+[33/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_TC_TC0_Capture-16bit_1_1_3.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_tc0_5_interrupt.c.obj
+[34/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_SERCOM_SERCOM_USART1_1_0_2.dir/C_/Users/c80977/AppData/Local/Arm/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_sercom1_usart.c.obj
+[35/36] Building C object CMakeFiles/Microchip_MCHP-PLIB_TC_TC0_Capture-16bit_1_1_3.dir/0beb17a17109a51c202aced5c9b6467d/Packs/Microchip/CMSIS-Driver_PIC32CM-JH/1.0.0/PIC32CM-JH01/plib/Source/plib_tc0_capture16bit.c.obj
+[36/36] Linking C executable C:\Users\c80977\Git\CNANO_MCHP_FreeRTOS_Example2\out\CNANO_MCHP_FreeRTOS_Example\PIC32CM5164JH01048\Debug\CNANO_MCHP_FreeRTOS_Example.elf
+Memory region         Used Size  Region Size  %age Used
+             rom:       35576 B       512 KB      6.79%
+             ram:       13096 B        64 KB     19.98%
+             cal:           0 B          8 B      0.00%
+         lockbit:           0 B          4 B      0.00%
+       user_page:           0 B        256 B      0.00%
+            otp1:           0 B          8 B      0.00%
+            otp2:           0 B          8 B      0.00%
+            otp3:           0 B          8 B      0.00%
+            otp4:           0 B          8 B      0.00%
+            otp5:           0 B          8 B      0.00%
+        temp_log:           0 B          8 B      0.00%
+[1/1] C:\windows\system32\cmd.exe /C "cd /D C:\Users\c80977\Git\CNANO_MCHP_FreeRTOS_Example2\tmp\1 && C:\Users\c80977\.vcpkg\artifacts\2139c4c6\tools.kitware.cmake\3.31.5\bin\cmake.exe -E make_directory C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/out/CNANO_MCHP_FreeRTOS_Example/PIC32CM5164JH01048/Debug && C:\Users\c80977\.vcpkg\artifacts\2139c4c6\tools.kitware.cmake\3.31.5\bin\cmake.exe -E copy_if_different C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/tmp/1/compile_commands.json C:/Users/c80977/Git/CNANO_MCHP_FreeRTOS_Example2/out/CNANO_MCHP_FreeRTOS_Example/PIC32CM5164JH01048/Debug"
++------------------------------------------------------------
+Build summary: 1 succeeded, 0 failed - Time Elapsed: 00:00:10
++============================================================
