@@ -1,5 +1,6 @@
 // Multi-waveform signal generator for PIC32CM5164JH01048
 // DAC is 10-bit (0-1023), not 12-bit
+#include "compiler_portability.h"
 #include "RTE_Components.h"
 #include CMSIS_device_header
 #include <stdio.h>

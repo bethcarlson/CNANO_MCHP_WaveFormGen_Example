@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "compiler_portability.h"
 #include "RTE_Components.h"
 #include CMSIS_device_header
 #include "cmsis_os2.h"
@@ -32,6 +33,11 @@ int main(void)
     /* Simple test to verify code is running */
     volatile uint32_t startup_test = 0xDEADBEEF;
     volatile uint32_t i;
+
+    /* Blink LED immediately to prove startup code runs */
+    PORT_REGS->GROUP[0].PORT_OUTSET = (1UL << 19);  /* LED on */
+    for (i = 0; i < 100000; i++) {}
+    PORT_REGS->GROUP[0].PORT_OUTCLR = (1UL << 19);  /* LED off */
 
     SystemInit();
     SystemCoreClockUpdate();

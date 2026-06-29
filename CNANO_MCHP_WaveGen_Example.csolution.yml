@@ -12,11 +12,52 @@ solution:
 
   # List of miscellaneous tool-specific controls
   misc:
-    - for-compiler: AC6 # GDB requires DWARF 5, remove when using uVision Debugger
+    - for-compiler: AC6
       C-CPP:
-        - -gdwarf-5
+        - -Wno-macro-redefined
+        - -Wno-pragma-pack
+        - -Wno-parentheses-equality
+        - -Wno-license-management
+      C:
+        - -std=gnu11
       ASM:
-        - -gdwarf-5
+        - -masm=auto
+      Link:
+        - --entry=Reset_Handler
+        - --info=summarysizes
+        - --summary_stderr
+        - --diag_suppress=L6314W
+
+    - for-compiler: GCC
+      C-CPP:
+        - -masm-syntax-unified
+        - -fomit-frame-pointer
+        - -ffunction-sections
+        - -fdata-sections
+      C:
+        - -std=gnu11
+      Link:
+        - --specs=nano.specs
+        - --specs=nosys.specs
+        - -Wl,-print-memory-usage
+        - -Wl,--gc-sections
+        - -Wl,--no-warn-rwx-segments
+
+    - for-compiler: CLANG
+      C-CPP:
+        - -fomit-frame-pointer
+        - -ffunction-sections
+        - -fdata-sections
+      C:
+        - -std=gnu11
+      Link:
+        - -Wl,-print-memory-usage
+        - -Wl,--gc-sections
+
+    - for-compiler: IAR
+      C-CPP:
+        - -e
+        - --dlib_config DLib_Config_Full.h
 
   # List the packs that define the device and/or board.
   packs:

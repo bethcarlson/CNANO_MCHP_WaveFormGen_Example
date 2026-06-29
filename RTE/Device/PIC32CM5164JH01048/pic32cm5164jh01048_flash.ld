@@ -74,7 +74,7 @@ __STACKSEAL_SIZE = DEFINED(__STACKSEAL_SIZE) ? __STACKSEAL_SIZE : 0;
  *************************************************************************/
 MEMORY
 {
-    rom (rx)    : ORIGIN = ROM_ORIGIN, LENGTH = ROM_LENGTH
+    rom (rwx)   : ORIGIN = ROM_ORIGIN, LENGTH = ROM_LENGTH
     ram (rwx)   : ORIGIN = RAM_ORIGIN, LENGTH = RAM_LENGTH
     /* Device configuration memory regions */
     /* Use __attribute__((section(".<section_name>"))) to place data in these regions */
@@ -151,7 +151,10 @@ SECTIONS
     {
         . = ALIGN(4);
         _sfixed = .;
+        /* Vector table must be at start of flash */
         KEEP(*(.vectors .vectors.*))
+        /* Alternative vector section names */
+        KEEP(*(.vectors_start))
         *(.text .text.* .gnu.linkonce.t.*)
         *(.glue_7t) *(.glue_7)
         *(.rodata .rodata* .gnu.linkonce.r.*)
@@ -369,6 +372,10 @@ SECTIONS
      *   this symbol to initialise the stack pointer.  PROVIDE means it is
      *   only emitted when not already defined by the application. */
     PROVIDE(__stack = __StackTop);
+
+    /* CMSIS startup compatibility aliases */
+    PROVIDE(__INITIAL_SP = __StackTop);
+    PROVIDE(__STACK_LIMIT = __StackLimit);
 
     . = ALIGN(4);
     /* _end : legacy symbol — equivalent to end / __end__; retained for
